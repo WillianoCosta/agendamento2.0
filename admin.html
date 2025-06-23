@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Hair Pro - Painel Administrativo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="placeholder-logo.png" alt="Logo Salão" class="logo"> </div>
+        <h1>Agenda Hair Pro - Painel Administrativo</h1>
+    </header>
+
+    <main class="container admin-dashboard">
+        <section class="summary-card">
+            <h2>Resumo do Dia</h2>
+            <p>Total de Agendamentos: <span id="totalAppointments">0</span></p>
+            <p>Arrecadação Prevista: <span id="dailyRevenue">R$ 0,00</span></p>
+        </section>
+
+        <section class="appointment-list">
+            <h2>Agendamentos do Dia</h2>
+            <div class="filter-controls">
+                <label for="appointmentDateFilter">Filtrar por Data:</label>
+                <input type="date" id="appointmentDateFilter">
+                <button class="btn-secondary" id="refreshAppointments">Atualizar Lista</button>
+            </div>
+            
+            <table id="appointmentsTable">
+                <thead>
+                    <tr>
+                        <th>Hora</th>
+                        <th>Cliente</th>
+                        <th>WhatsApp</th>
+                        <th>Serviço</th>
+                        <th>Valor</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+            <p id="noAppointmentsMessage" style="text-align: center; margin-top: 20px; display: none;">Nenhum agendamento para esta data.</p>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Agenda Hair Pro. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
